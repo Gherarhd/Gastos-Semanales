@@ -134,6 +134,8 @@ class UI {
     if (restante <= 0) {
       ui.imprimirAlerta("Presupuesto agotado", "error");
       formulario.querySelector('button[type="submit"]').disabled = true;
+    } else if (restante > 0) {
+      formulario.querySelector('button[type="submit"]').disabled = false;
     }
   }
 }
