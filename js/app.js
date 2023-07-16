@@ -44,7 +44,6 @@ class UI {
   insertarPresupuesto(cantidad) {
     //Extrayendo valores
     const { presupuesto, restante } = cantidad;
-    console.log(cantidad);
 
     //añadir al html
     document.querySelector("#total").textContent = presupuesto;
@@ -124,7 +123,7 @@ class UI {
     }
     //comprobar presupuesto 50%
     else if (presupuesto / 2 >= restante) {
-      restanteDiv.classList.remove("alert-success");
+      restanteDiv.classList.remove("alert-success", "alert-danger");
       restanteDiv.classList.add("alert-warning");
     } else {
       restanteDiv.classList.remove("alert-danger", "alert-warning");
@@ -210,4 +209,14 @@ function eliminarGasto(id) {
   ui.mostrarGastos(gastos);
   ui.actualizarRestante(restante);
   ui.comprobrarPresupuesto(presupuesto);
+}
+
+//reiniciar pagina
+const btnReset = document.querySelector("#reset");
+btnReset.onclick = () => {
+  resetPagina();
+};
+
+function resetPagina() {
+  location.reload(); // location.reload();
 }

@@ -13,6 +13,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/custom.css" />
+    <link
+      rel="shortcut icon"
+      href="img/money-svgrepo-com.svg"
+      type="image/x-icon"
+    />
     <title>Gasto Semanal</title>
   </head>
   <body>
@@ -68,6 +73,7 @@
                 <div class="restante alert alert-success">
                   <p>Restante: $ <span id="restante"></span></p>
                 </div>
+                <button id="reset" class="btn btn-danger">Reset</button>
               </div>
               <!--.presupuesto-->
             </div>
@@ -78,7 +84,16 @@
         <!--.row-->
       </section>
     </div>
-
+    <section class="text-center contenido-info">
+      <h2>¡Gestiona tus gastos semanales de manera inteligente!</h2>
+      <div class="div-pig">
+        <img
+          class="pig img-fluid"
+          src="img/money-pig-svgrepo-com.svg"
+          alt="pig"
+        />
+      </div>
+    </section>
     <script src="js/app.js"></script>
   </body>
 </html>

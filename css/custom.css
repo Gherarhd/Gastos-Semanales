@@ -46,8 +46,16 @@ h1 {
 }
 h2 {
   font-family: "Raleway", sans-serif;
-  font-weight: 100;
+  font-weight: 400;
   color: #004e92;
   font-size: 22px;
   margin-bottom: 30px;
+}
+
+.contenido-info {
+  margin-top: 30px;
+  text-shadow: 0px 0px 5px #545457;
+}
+.pig {
+  width: 100px;
 }
