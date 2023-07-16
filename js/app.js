@@ -115,6 +115,7 @@ class UI {
   comprobrarPresupuesto(presupuestObj) {
     const { presupuesto, restante } = presupuestObj;
     const restanteDiv = document.querySelector(".restante");
+    const faceSad = document.querySelector("#face");
 
     //comprobar presupuesto 25%
     if (presupuesto / 4 > restante) {
@@ -134,8 +135,12 @@ class UI {
     if (restante <= 0) {
       ui.imprimirAlerta("Presupuesto agotado", "error");
       formulario.querySelector('button[type="submit"]').disabled = true;
+      faceSad.classList.remove("not-sad");
+      faceSad.classList.add("sad");
     } else if (restante > 0) {
       formulario.querySelector('button[type="submit"]').disabled = false;
+      faceSad.classList.remove("sad");
+      faceSad.classList.add("not-sad");
     }
   }
 }

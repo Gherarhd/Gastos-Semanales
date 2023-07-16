@@ -59,3 +59,12 @@ h2 {
 .pig {
   width: 100px;
 }
+.sad {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.not-sad {
+  display: none;
+}
